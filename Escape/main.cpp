@@ -1,4 +1,5 @@
 ﻿#include "main.h"
+#include "util.h"
 
 int main() {
 	init();
@@ -8,13 +9,11 @@ int main() {
 		int menuCode = menuDraw();
 		if (START_GAME == menuCode) {
 			int n = maplistDraw();
-			if (EASY == n)
-			{
-				drawMap();
+			if (EASY == n){
+				gLoop(0);
 			}
 			else if (HARD == n) {
-				printf("어려움 선택함");
-				Sleep(1000);
+				gLoop(1);
 			}
 		}else if (HELP_GAME == menuCode) {
 			infoDraw();

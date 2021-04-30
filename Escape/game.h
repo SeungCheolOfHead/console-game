@@ -28,4 +28,7 @@ int menuDraw();
 int maplistDraw();
 void titleDraw();
 void infoDraw();
-void drawMap();
+void drawMap(int*, int*);
+void gLoop(int);
+void move(int*, int*, int, int, int*, int*);
+void drawUI(int*, int*, int*);
